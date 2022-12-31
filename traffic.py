@@ -22,10 +22,10 @@ def waitedscroll(a, b, scrollGap):
 
 
 def buzziness():
-    pg.move(random.randrange(5, 10), 0, random.uniform(0.1, 0.3))
-    pg.move(0, random.randrange(5, 10), random.uniform(0.1, 0.3))
-    pg.move(0, -random.randrange(5, 10), random.uniform(0.1, 0.3))
-    pg.move(-random.randrange(5, 10), 0, random.uniform(0.1, 0.3))
+    pg.move(random.uniform(5, 10), 0, random.uniform(0.1, 0.3))
+    pg.move(0, random.uniform(5, 10), random.uniform(0.1, 0.3))
+    pg.move(0, -random.uniform(5, 10), random.uniform(0.1, 0.3))
+    pg.move(-random.uniform(5, 10), 0, random.uniform(0.1, 0.3))
 
 
 def openQuitTor():
@@ -75,16 +75,16 @@ while True:
     pg.click()
     pg.typewrite(blogsList[random.randrange(0, len(blogsList))])
     pg.typewrite(["enter"])
-    time.sleep(random.randrange(5, 10))
-    pg.moveTo(random.randrange(percentToPixelX(10), percentToPixelX(90)),
-              random.randrange(
+    time.sleep(random.uniform(5, 10))
+    pg.moveTo(random.uniform(percentToPixelX(10), percentToPixelX(90)),
+              random.uniform(
         percentToPixelY(20), percentToPixelY(90)), random.uniform(0.25, 0.75))
-    conditions = [time.sleep(random.randrange(5, 10)),
+    conditions = [time.sleep(random.uniform(5, 10)),
                   buzziness(),
-                  pg.moveTo(random.randrange(percentToPixelX(10), percentToPixelX(90)),
-                            random.randrange(
-                      percentToPixelY(20), percentToPixelY(90)), random.uniform(0.25, 0.75)), pg.moveTo(random.randrange(percentToPixelX(10), percentToPixelX(90)),
-                                                                                                        random.randrange(
+                  pg.moveTo(random.uniform(percentToPixelX(10), percentToPixelX(90)),
+                            random.uniform(
+                      percentToPixelY(20), percentToPixelY(90)), random.uniform(0.25, 0.75)), pg.moveTo(random.uniform(percentToPixelX(10), percentToPixelX(90)),
+                                                                                                        random.uniform(
                           percentToPixelY(20), percentToPixelY(90)), random.uniform(0.25, 0.75)),
                   waitedscroll(10, 40, -1), buzziness(),
                   time.sleep(random.uniform(1, 10)),
@@ -107,4 +107,4 @@ while True:
     pg.click()
 
     print("done loop", count)
-    time.sleep(random.randrange(60, 80))
+    time.sleep(random.uniform(60, 80))
