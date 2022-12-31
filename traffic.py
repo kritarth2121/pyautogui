@@ -38,10 +38,10 @@ while True:
     time.sleep(5)
 
     pg.hotkey("win", "up")
-    pg.moveTo(1800, 100, 2)
+    pg.moveTo(1850, 100, 2)
     pg.click()
     
-    pg.moveTo(1545, 620, 2)
+    pg.moveTo(1610, 620, 2)
     pg.click()
 
     time.sleep(2)
@@ -78,7 +78,7 @@ while True:
     print(conditions)
     for i in conditions:
         i
-    pg.moveTo(1750, 100, random.uniform(0.25, 2))
+    pg.moveTo(1800, 100, random.uniform(0.25, 2))
     pg.click()
     print("done loop",count)
     time.sleep(random.randrange(60, 80))
