@@ -25,6 +25,7 @@ def openTor():
         pg.hotkey("ctrl", "alt","d")
         pg.moveTo(1530, 1050)
         pg.click()
+        time.sleep(6)
 
 
 blogsList = ["https://www.wealthandtech.com/2022/12/start-your-journey-to-becoming-data.html",
@@ -49,7 +50,6 @@ while True:
         openQuitTor()
 
     count+=1
-    time.sleep(5)
 
     pg.hotkey("win", "up")
     pg.moveTo(1850, 100, 2)
