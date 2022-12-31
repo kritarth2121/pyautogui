@@ -1,11 +1,9 @@
-    # pg.moveTo(1700, 1200, 0.2)
-    # pg.moveTo(1700, 1050, 1)
-    # pg.click()
-    # time.sleep(5)
+import pyautogui as pg
+import time
+import random
 
-    # pg.moveTo(1800, 100, 2)
-    # pg.click()
-
-    # pg.moveTo(1780, 580, 2)
-    # pg.click()
-    # time.sleep(5)
+time.sleep(4)
+pg.hotkey("ctrl", "q")
+pg.hotkey("ctrl", "alt","d")
+pg.moveTo(1530, 1050, 1)
+pg.click()

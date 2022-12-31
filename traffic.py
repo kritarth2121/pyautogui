@@ -17,6 +17,15 @@ def buzziness():
     pg.move(0, -random.randrange(5, 10), random.uniform(0.1, 0.3))
     pg.move(-random.randrange(5, 10), 0, random.uniform(0.1, 0.3))
 
+def openQuitTor():
+        pg.hotkey("ctrl", "q")
+        openTor()
+
+def openTor():
+        pg.hotkey("ctrl", "alt","d")
+        pg.moveTo(1530, 1050)
+        pg.click()
+
 
 blogsList = ["https://www.wealthandtech.com/2022/12/start-your-journey-to-becoming-data.html",
              "https://www.wealthandtech.com/2022/12/become-web-developer-in-7-easy-steps.html",
@@ -34,6 +43,11 @@ blogsList = ["https://www.wealthandtech.com/2022/12/start-your-journey-to-becomi
 
 count=0
 while True:
+    if count==0:
+        openTor()
+    elif count%10:
+        openQuitTor()
+
     count+=1
     time.sleep(5)
 
@@ -43,9 +57,7 @@ while True:
     
     pg.moveTo(1610, 620, 2)
     pg.click()
-
     time.sleep(2)
-
 
     pg.moveTo(500, 100, 2)
     pg.click()
@@ -78,7 +90,9 @@ while True:
     print(conditions)
     for i in conditions:
         i
+
     pg.moveTo(1800, 100, random.uniform(0.25, 2))
     pg.click()
+
     print("done loop",count)
     time.sleep(random.randrange(60, 80))
