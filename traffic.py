@@ -85,7 +85,7 @@ while True:
     pg.moveTo(percentToPixelX(96.35), percentToPixelY(9.25), 2)
     pg.click()
 
-    pg.moveTo(percentToPixelX(83.85), percentToPixelY(57.40), 2)
+    pg.moveTo(percentToPixelX(83.85), percentToPixelY(47.40), 2)
     pg.click()
     time.sleep(2)
 
