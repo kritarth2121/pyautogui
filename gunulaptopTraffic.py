@@ -34,11 +34,15 @@ def openQuitTor():
 
 
 def openTor():
-        print("TOR OPENED")
-        pg.hotkey("ctrl", "alt", "d")
-        pg.moveTo(960, 750)
-        pg.click()
-        time.sleep(6)
+    print("TOR OPENED")
+    pg.hotkey("ctrl", "alt", "d")
+    pg.moveTo(960, 750)
+    pg.click()
+    time.sleep(6)
+    pg.moveTo(percentToPixelX(93.75), percentToPixelY(
+        9.25), random.uniform(0.25, 2))
+    pg.click()
+    time.sleep(2)
 
 
 blogsList = ["https://www.wealthandtech.com/2022/12/start-your-journey-to-becoming-data.html",
@@ -59,8 +63,6 @@ count = 0
 while True:
     if count == 0:
         openTor()
-    elif count % 10:
-        openQuitTor()
 
     count += 1
 
@@ -86,7 +88,7 @@ while True:
                             random.uniform(
                       percentToPixelY(20), percentToPixelY(90)), random.uniform(0.25, 0.75)), pg.moveTo(random.uniform(percentToPixelX(10), percentToPixelX(90)),
                                                                                                         random.uniform(
-                          percentToPixelY(20), percentToPixelY(90)), random.uniform(0.25, 0.75)),
+                          percentToPixelY(20), percentToPixelY(90)), random.uniform(0.25, 0.75)) ,
                   waitedscroll(10, 40, -1), buzziness(),
                   time.sleep(random.uniform(1, 10)),
                   waitedscroll(5, 10, 1),
@@ -102,10 +104,7 @@ while True:
     print(conditions)
     for i in conditions:
         i
-
-    pg.moveTo(percentToPixelX(93.75), percentToPixelY(
-        9.25), random.uniform(0.25, 2))
-    pg.click()
-
+    openQuitTor()
+    
     print("done loop", count)
-    time.sleep(random.uniform(60, 80))
+    time.sleep(random.uniform(30, 80))
