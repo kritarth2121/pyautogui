@@ -28,6 +28,16 @@ def buzziness():
     pg.move(-random.uniform(5, 10), 0, random.uniform(0.1, 0.3))
 
 
+def setTime():
+    pg.hotkey("ctrl", "alt", "t")
+    time.sleep(4)
+    # timedatectl set-timezone 'Asia/Kolkata'
+    pg.write("timedatectl set-timezone 'Europe/London'")
+    pg.press("enter")
+    pg.hotkey("ctrl", "q")
+    time.sleep(4)
+
+
 def openQuitTor():
     print("TOR CLOSED")
     pg.hotkey("ctrl", "q")
@@ -35,6 +45,7 @@ def openQuitTor():
 
 
 def openTor():
+    setTime()
     print("TOR OPENED")
     pg.hotkey("ctrl", "alt", "d")
     pg.moveTo(1530, 1050)
@@ -44,6 +55,7 @@ def openTor():
         9.25), random.uniform(0.25, 2))
     pg.click()
     time.sleep(2)
+
 
 blogsList = ["https://www.wealthandtech.com/2022/12/start-your-journey-to-becoming-data.html",
              "https://www.wealthandtech.com/2022/12/become-web-developer-in-7-easy-steps.html",
@@ -57,13 +69,15 @@ blogsList = ["https://www.wealthandtech.com/2022/12/start-your-journey-to-becomi
              "https://www.wealthandtech.com/2022/12/discover-power-of-self-care-guide-to.html",
              "https://www.wealthandtech.com/2022/12/conquering-loneliness-discover-how-to.html",
              "https://www.wealthandtech.com/2022/12/digital-detox-how-to-kick-your.html",
-             "https://www.wealthandtech.com/2022/12/xc.html"]
+             "https://www.wealthandtech.com/2022/12/xc.html",
+             "https://www.wealthandtech.com/2023/01/uncovering-truth-behind-olymp.html",
+             "https://www.wealthandtech.com/2023/01/online-speed-chess-secret-weapon-for.html",
+             ]
 
 count = 0
 while True:
     if count == 0:
         openTor()
-    
 
     count += 1
 
@@ -107,7 +121,6 @@ while True:
         i
 
     openQuitTor()
-    
 
     print("done loop", count)
     time.sleep(random.uniform(30, 80))
