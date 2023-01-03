@@ -44,16 +44,18 @@ def setTime():
 
 
 def openTor():
-    setTime()
     print("TOR OPENED")
     pg.hotkey("ctrl", "alt", "d")
     pg.moveTo(960, 750)
     pg.click()
     time.sleep(6)
+    pg.hotkey("win", "up")
     pg.moveTo(percentToPixelX(93.75), percentToPixelY(
         9.25), random.uniform(0.25, 2))
     pg.click()
-    time.sleep(2)
+    time.sleep(3)
+    pg.hotkey("win", "up")
+    time.sleep(3)
 
 
 blogsList = ["https://www.wealthandtech.com/2022/12/start-your-journey-to-becoming-data.html",
@@ -81,10 +83,10 @@ while True:
     count += 1
 
     pg.hotkey("win", "up")
-    pg.moveTo(percentToPixelX(96.35), percentToPixelY(9.25), 2)
+    pg.moveTo(percentToPixelX(96.35), percentToPixelY(9.6), 1)
     pg.click()
 
-    pg.moveTo(percentToPixelX(83.85), percentToPixelY(64.54), 2)
+    pg.moveTo(percentToPixelX(83.85), percentToPixelY(59.40), 1)
     pg.click()
     time.sleep(2)
 
