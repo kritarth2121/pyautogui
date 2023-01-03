@@ -34,7 +34,8 @@ def setTime():
     # timedatectl set-timezone 'Asia/Kolkata'
     pg.write("timedatectl set-timezone 'Europe/London'")
     pg.press("enter")
-    pg.hotkey("ctrl", "q")
+    time.sleep(2)
+    pg.hotkey("ctrl", "shift","w")
     time.sleep(4)
 
 
@@ -45,17 +46,24 @@ def openQuitTor():
 
 
 def openTor():
-    setTime()
+    
     print("TOR OPENED")
     pg.hotkey("ctrl", "alt", "d")
     pg.moveTo(1530, 1050)
     pg.click()
     time.sleep(6)
+    pg.hotkey("win", "up")
+
     pg.moveTo(percentToPixelX(93.75), percentToPixelY(
         9.25), random.uniform(0.25, 2))
-    pg.click()
-    time.sleep(2)
 
+    pg.click()
+    pg.moveTo(percentToPixelX(50), percentToPixelY(
+        50), random.uniform(0.25, 2))
+    pg.click()
+    pg.hotkey("win", "up")
+    time.sleep(2)
+    
 
 blogsList = ["https://www.wealthandtech.com/2022/12/start-your-journey-to-becoming-data.html",
              "https://www.wealthandtech.com/2022/12/become-web-developer-in-7-easy-steps.html",
@@ -77,15 +85,13 @@ blogsList = ["https://www.wealthandtech.com/2022/12/start-your-journey-to-becomi
 count = 0
 while True:
     if count == 0:
+        # setTime()
         openTor()
 
     count += 1
-
-    pg.hotkey("win", "up")
-    pg.moveTo(percentToPixelX(96.35), percentToPixelY(9.25), 2)
+    pg.moveTo(percentToPixelX(96.35), percentToPixelY(9.25), 1)
     pg.click()
-
-    pg.moveTo(percentToPixelX(83.85), percentToPixelY(47.40), 2)
+    pg.moveTo(percentToPixelX(83.85), percentToPixelY(52.40), 1)
     pg.click()
     time.sleep(2)
 
