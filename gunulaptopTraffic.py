@@ -54,6 +54,9 @@ def openTor():
         9.25), random.uniform(0.25, 2))
     pg.click()
     time.sleep(3)
+    pg.moveTo(percentToPixelX(50), percentToPixelY(
+        50), random.uniform(0.25, 2))
+    pg.click()
     pg.hotkey("win", "up")
     time.sleep(3)
 
