@@ -111,10 +111,11 @@ while True:
                                                                                                         random.uniform(
                           percentToPixelY(20), percentToPixelY(90)), random.uniform(0.25, 0.75)),
                   waitedscroll(10, 40, -1), buzziness(),
-                  time.sleep(random.uniform(1, 10)),
+                  time.sleep(random.uniform(10, 20)),
                   waitedscroll(5, 10, 1),
                   buzziness(),
-                  time.sleep(random.uniform(1, 10)),
+                  pg.click(),
+                  time.sleep(random.uniform(5, 20)),
                   buzziness(),
                   time.sleep(random.uniform(1, 10)),
                   waitedscroll(10, 30, -1),
